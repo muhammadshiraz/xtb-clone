@@ -1,4 +1,5 @@
 const nextConfig = {
+  output: 'export',
   reactStrictMode: true,
   compiler: {
     styledComponents: true,
@@ -55,7 +56,7 @@ const nextConfig = {
   trailingSlash: true,
   productionBrowserSourceMaps: true,
   experimental: {
-    optimizeCss: true, // ✅ Keep this, it's valid
+    optimizeCss: true,
   },
 };
 
