@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom base styles */
+body {
+  @apply bg-white text-xtb-dark;
+}
+
+/* Custom components */
+.btn-primary {
+  @apply bg-xtb-blue text-white px-6 py-3 rounded-lg hover:bg-blue-600 transition-colors;
+}
