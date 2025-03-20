@@ -5,8 +5,10 @@ import Hero from "@/components/sections/Hero";
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
+    <main className="">
       <Navbar />
+      <Hero />
+      <Hero />
       <Hero />
       {/* Add other sections */}
     </main>

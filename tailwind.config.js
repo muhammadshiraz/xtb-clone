@@ -1,17 +1,158 @@
+// tailwind.config.js
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
+  content: ['./app/**/*.{js,ts,jsx,tsx,mdx}', './components/**/*.{js,ts,jsx,tsx,mdx}'],
   theme: {
-    extend: {
-      colors: {
-        'xtb-blue': '#0066B3',
-        'xtb-dark': '#1A1E2C',
-        'xtb-accent': '#FF6B00',
+    container: {
+      center: true,
+      padding: '0.75rem',
+      screens: {
+        xl: '1170px',
       },
+    },
+    extend: {
+      colors: () => ({
+        // Base Colors
+        black: 'var(--base-black)',
+        white: 'var(--base-white)',
+
+        // Color Scales
+        gray: {
+          5: 'var(--gray-5)',
+          10: 'var(--gray-10)',
+          20: 'var(--gray-20)',
+          30: 'var(--gray-30)',
+          40: 'var(--gray-40)',
+          50: 'var(--gray-50)',
+          60: 'var(--gray-60)',
+          70: 'var(--gray-70)',
+          80: 'var(--gray-80)',
+          90: 'var(--gray-90)',
+          100: 'var(--gray-100)',
+        },
+        green: {
+          5: 'var(--green-5)',
+          10: 'var(--green-10)',
+          20: 'var(--green-20)',
+          30: 'var(--green-30)',
+          40: 'var(--green-40)',
+          50: 'var(--green-50)',
+          60: 'var(--green-60)',
+          70: 'var(--green-70)',
+          80: 'var(--green-80)',
+          90: 'var(--green-90)',
+          100: 'var(--green-100)',
+        },
+        red: {
+          5: 'var(--red-5)',
+          10: 'var(--red-10)',
+          20: 'var(--red-20)',
+          30: 'var(--red-30)',
+          40: 'var(--red-40)',
+          50: 'var(--red-50)',
+          60: 'var(--red-60)',
+          70: 'var(--red-70)',
+          80: 'var(--red-80)',
+          90: 'var(--red-90)',
+          100: 'var(--red-100)',
+        },
+        blue: {
+          5: 'var(--blue-5)',
+          10: 'var(--blue-10)',
+          20: 'var(--blue-20)',
+          30: 'var(--blue-30)',
+          40: 'var(--blue-40)',
+          50: 'var(--blue-50)',
+          60: 'var(--blue-60)',
+          70: 'var(--blue-70)',
+          80: 'var(--blue-80)',
+          90: 'var(--blue-90)',
+          100: 'var(--blue-100)',
+        },
+        yellow: {
+          5: 'var(--yellow-5)',
+          10: 'var(--yellow-10)',
+          20: 'var(--yellow-20)',
+          30: 'var(--yellow-30)',
+          40: 'var(--yellow-40)',
+          50: 'var(--yellow-50)',
+          60: 'var(--yellow-60)',
+          70: 'var(--yellow-70)',
+          80: 'var(--yellow-80)',
+          90: 'var(--yellow-90)',
+          100: 'var(--yellow-100)',
+        },
+
+        // Semantic Colors
+        background: {
+          strong: 'var(--background-strong)',
+          weak: 'var(--background-weak)',
+        },
+        surface: {
+          DEFAULT: 'var(--surface-strong)',
+          secondary: 'var(--surface-secondary)',
+          medium: 'var(--surface-medium)',
+          weak: 'var(--surface-weak)',
+          inverted: 'var(--surface-inverted)',
+          disabled: 'var(--surface-disabled)',
+          selected: 'var(--surface-selected)',
+          info: 'var(--surface-info)',
+          success: 'var(--surface-success)',
+          warning: 'var(--surface-warning)',
+          danger: 'var(--surface-danger)',
+          buy: 'var(--surface-buy)',
+          sell: 'var(--surface-sell)',
+        },
+        text: {
+          strong: 'var(--text-strong)',
+          medium: 'var(--text-medium)',
+          weak: 'var(--text-weak)',
+          inverted: 'var(--text-inverted)',
+          disabled: 'var(--text-disabled)',
+          info: 'var(--text-info)',
+          success: 'var(--text-success)',
+          warning: 'var(--text-warning)',
+          danger: 'var(--text-danger)',
+          buy: 'var(--text-buy)',
+          sell: 'var(--text-sell)',
+        },
+        border: {
+          strong: 'var(--border-strong)',
+          weak: 'var(--border-weak)',
+          disabled: 'var(--border-disabled)',
+          selected: 'var(--border-selected)',
+          info: 'var(--border-info)',
+          success: 'var(--border-success)',
+          warning: 'var(--border-warning)',
+          danger: 'var(--border-danger)',
+          buy: 'var(--border-buy)',
+          sell: 'var(--border-sell)',
+        },
+        decorative: {
+          amber: 'var(--decorative-amber)',
+          amethyst: 'var(--decorative-amethyst)',
+          crystal: 'var(--decorative-crystal)',
+          amaranth: 'var(--decorative-amaranth)',
+          gravel: 'var(--decorative-gravel)',
+        },
+        essentials: {
+          primary: 'var(--essentials-primary)',
+          secondary: 'var(--essentials-secondary)',
+          brand: 'var(--essentials-brand)',
+        },
+      }),
+      // Additional semantic extensions
+      backgroundColor: ({ theme }) => ({
+        ...theme('colors.surface'),
+        ...theme('colors.background'),
+      }),
+      textColor: ({ theme }) => ({
+        ...theme('colors.text'),
+      }),
+      borderColor: ({ theme }) => ({
+        ...theme('colors.border'),
+      }),
     },
   },
   plugins: [],
-}
+};
