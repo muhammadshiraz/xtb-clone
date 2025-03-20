@@ -5,10 +5,8 @@ import Hero from "@/components/sections/Hero";
 
 export default function Home() {
   return (
-    <main className="">
+    <main className="bg-white">
       <Navbar />
-      <Hero />
-      <Hero />
       <Hero />
       {/* Add other sections */}
     </main>

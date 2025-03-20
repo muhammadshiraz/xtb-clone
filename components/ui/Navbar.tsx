@@ -55,13 +55,10 @@ export default function Navbar() {
             </LogoWrapper>
           </Link>
           <div className="flex">
-            <a href="#" className="text-gray-600 hover:bg-gray-5 py-[11px] px-4 text-base rounded-lg font-normal">
+            <a href="/" className="text-gray-600 hover:bg-gray-5 py-[11px] px-4 text-base rounded-lg font-normal">
               Invest
             </a>
-            <a href="#" className="text-gray-600 hover:bg-gray-5 py-[11px] px-4 text-base rounded-lg font-normal">
-              Education
-            </a>
-            <a href="#" className="text-gray-600 hover:bg-gray-5 py-[11px] px-4 text-base rounded-lg font-normal">
+            <a href="/" className="text-gray-600 hover:bg-gray-5 py-[11px] px-4 text-base rounded-lg font-normal">
               About us
             </a>
           </div>
