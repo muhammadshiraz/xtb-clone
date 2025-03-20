@@ -3,6 +3,7 @@
 import styled from 'styled-components';
 import Image from 'next/image';
 import { IconText } from '@/components/ui/IconText';
+import { Heading } from '@/components/ui/Heading';
 
 const HeroContainer = styled.section`
   background: linear-gradient(0deg, hsla(240, 4%, 95%, 0.92) -6.02%, hsla(0, 0%, 100%, 0) 112.56%);
@@ -24,7 +25,7 @@ export default function Hero() {
             imageProps={{ width: 16, height: 16, alt: '24/5 Support' }}
           />
         </div>
-        <h1 className="text-5xl font-bold mb-4 text-gray-100">Where your money works</h1>
+        <Heading>Where your money works</Heading>
         <p className="text-base font-normal text-gray-60 mb-8">Investing, market analysis, education</p>
         <Image
           src="/images/hero.png"
