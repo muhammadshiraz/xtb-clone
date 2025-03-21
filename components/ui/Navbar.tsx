@@ -9,6 +9,7 @@ const NavContainer = styled.div`
   border-bottom: 1px solid var(--transparent-gray-10010);
   top: 0;
   position: sticky;
+  z-index: 999999;
   backdrop-filter: blur(30px);
   transition: margin-top 0.3s ease-in;
   height: 78px;
