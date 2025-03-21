@@ -1,6 +1,4 @@
 'use client';
-
-import styled from 'styled-components';
 import Image from 'next/image';
 import { IconText } from '@/components/ui/IconText';
 import { Heading } from '@/components/ui/Heading';
@@ -8,14 +6,14 @@ import Link from 'next/link';
 
 export default function Offer() {
   return (
-    <div className="py-8">
+    <section className="mt-10 mb-[120px]">
       <div className="container mx-auto text-center">
         <div className="flex flex-col justify-center items-center gap-y-3 mb-4">
           <IconText text="Offer" />
           <Heading>Invest your way</Heading>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           <div className="flex flex-col justify-between gap-y-2 rounded-2xl border border-xtb-blue bg-white relative overflow-hidden">
             <div className="flex flex-col items-start justify-center py-8 px-12">
               <Heading size="32" spacing="mb-2" className="text-left leading-10">
@@ -107,6 +105,6 @@ export default function Offer() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
