@@ -8,6 +8,9 @@ type IconTextProps = {
   className?: string;
   iconClassName?: string;
   imageProps?: Omit<ImageProps, 'src'> & { alt: string };
+  bgClassName?: string;
+  borderClassName?: string;
+  textClassName?: string;
 };
 
 export function IconText({
@@ -17,6 +20,9 @@ export function IconText({
   className = '',
   iconClassName = '',
   imageProps,
+  bgClassName = 'bg-white',
+  borderClassName = 'border border-xtb-blue',
+  textClassName = 'text-gray-60',
   ...props
 }: IconTextProps) {
   const renderIcon = () => {
@@ -35,11 +41,11 @@ export function IconText({
 
   return (
     <div
-      className={`flex items-center justify-center gap-2 border-solid border border-xtb-blue rounded-3xl bg-white py-[6px] px-[10px] w-max ${className}`}
+      className={`flex items-center justify-center gap-2 border-solid rounded-3xl py-[6px] px-[10px] min-h-[33.6px] w-max ${bgClassName} ${borderClassName} ${className}`}
       {...props}
     >
       {icon && iconPosition === 'left' && renderIcon()}
-      <span className="text-gray-60 text-sm font-normal">{text}</span>
+      <span className={`${textClassName} text-sm font-normal leading-none tracking-[.15px]`}>{text}</span>
       {icon && iconPosition === 'right' && renderIcon()}
     </div>
   );

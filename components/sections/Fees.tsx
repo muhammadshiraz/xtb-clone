@@ -1,5 +1,4 @@
 'use client';
-import styled from 'styled-components';
 import Image from 'next/image';
 import { IconText } from '@/components/ui/IconText';
 import { Heading } from '@/components/ui/Heading';
